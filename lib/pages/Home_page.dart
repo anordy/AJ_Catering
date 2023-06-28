@@ -68,7 +68,7 @@ class _HomePage extends State<HomePage> {
   }
 
   List<Widget> _buildScreens(bool isAuth) {
-    return [ HomeScreen(), const OrderScreen(), const ProfileScreen()];
+    return [ HomeScreen(), const OrderScreen()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
@@ -76,28 +76,18 @@ class _HomePage extends State<HomePage> {
       PersistentBottomNavBarItem(
           icon: const Icon(Icons.grid_view),
           title: ("Home"),
-          activeColorPrimary: AppColor.base,
+          activeColorPrimary: AppColor.bgScreen2,
           inactiveColorPrimary: const Color(0xFF000000),
           onPressed: (val) {
             _controller.jumpToTab(0);
           }),
       PersistentBottomNavBarItem(
           icon: const Icon(CupertinoIcons.check_mark),
-          title: ("Order"),
-          activeColorPrimary: AppColor.base,
+          title: ("Orders"),
+          activeColorPrimary: AppColor.bgScreen2,
           inactiveColorPrimary: const Color(0xFF000000),
           onPressed: (val) {
             _controller.jumpToTab(1);
-          }),
-          
-             
-      PersistentBottomNavBarItem(
-          icon: const Icon(Icons.card_giftcard_outlined),
-          title: ("Profile"),
-          activeColorPrimary: AppColor.base,
-          inactiveColorPrimary: const Color(0xFF000000),
-          onPressed: (a) {
-            _controller.jumpToTab(4);
           }),
     ];
   }
