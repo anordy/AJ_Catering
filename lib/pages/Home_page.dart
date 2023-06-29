@@ -1,6 +1,5 @@
 import 'package:aj_catering/pages/screen/home_screen.dart';
 import 'package:aj_catering/pages/screen/order_screen.dart';
-import 'package:aj_catering/pages/screen/profile_screen.dart';
 import 'package:aj_catering/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

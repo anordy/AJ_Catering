@@ -280,7 +280,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(50),
                   child: MaterialButton(
                     height: 50,
-                    color: AppColor.btnColor,
+                    color: AppColor.shadow2,
                     onPressed: () {},
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -319,7 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Text("Vegetables",
               style: TextStyle(
-                  color: AppColor.deepOrange,
+                  color: AppColor.shadow1,
                   fontSize: 16,
                   fontWeight: FontWeight.w600)),
           CheckboxListTile(
@@ -363,7 +363,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Text("Fruits",
               style: TextStyle(
-                  color: AppColor.deepOrange,
+                  color: AppColor.shadow1,
                   fontSize: 16,
                   fontWeight: FontWeight.w600)),
           CheckboxListTile(
