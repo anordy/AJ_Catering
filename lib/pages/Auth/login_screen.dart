@@ -1,4 +1,3 @@
-
 import 'package:aj_catering/pages/Home_page.dart';
 import 'package:aj_catering/utils/colors.dart';
 import 'package:aj_catering/utils/utils.dart';
@@ -23,8 +22,7 @@ class _LoginScreen extends State<LoginScreen> {
   bool loading = false;
   bool invalidCode = false;
 
-
- @override
+  @override
   void initState() {
     super.initState();
   }
@@ -79,7 +77,6 @@ class _LoginScreen extends State<LoginScreen> {
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF4FBA6F))),
                   ])),
-             
                   Container(
                       padding: const EdgeInsets.only(top: 30),
                       child: const Text(
@@ -111,8 +108,8 @@ class _LoginScreen extends State<LoginScreen> {
                   ),
                   child: TextField(
                     keyboardType: TextInputType.phone,
-                    decoration:
-                        const InputDecoration(hintMaxLines: 1, hintText: "656725750"),
+                    decoration: const InputDecoration(
+                        hintMaxLines: 1, hintText: "656725750"),
                     onChanged: (text) {
                       this.phone = text;
                     },
@@ -131,96 +128,88 @@ class _LoginScreen extends State<LoginScreen> {
                       color: Colors.black),
                 )),
             Container(
-                width: MediaQuery.of(context).size.width / 1.7,
-                padding: const EdgeInsets.only(left: 25, top: 30),
-                child: const Row(children: [
-                   Text(
-                    "Use",
-                    style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black),
-                  ),
-                 
-                ])),
-            Container(
               padding: const EdgeInsets.only(left: 5, top: 30),
               width: MediaQuery.of(context).size.width,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MaterialButton(
-                    height: 45,
-                    minWidth: Utils.displayWidth(context) * 0.45,
-                    color: Colors.black87,
-                    onPressed: () {
-                      
-                    },
-                    child: const Text("SKIP",style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white))
-                  
-                  ),
-                  const SizedBox(width: 1,),
-                  MaterialButton(
-                    color: Colors.black87,
-                     height: 45,
-                    minWidth: Utils.displayWidth(context) * 0.45,
-                    onPressed: () {
-                      showDialog(
-        context: context,
-        barrierDismissible: true,
-        builder: (context) => AlertDialog(
-              title: const Text("Enter verification code"),
-              content: Container(
-                height: Utils.displayHeight(context) * 0.1,
-                child: Column(
-                  children: [
-                    TextField(
-                      keyboardType: TextInputType.number,
-                      maxLength: 6,
-                      decoration: const InputDecoration(hintText: "******"),
-                      onChanged: (text) {
-                        this.verificationCode = text;
-                      },
-                    ),
-                   
-                   
-                  ],
-                ),
-              ),
-              actions: [
-                MaterialButton(
-                    color: Colors.white,
-                    child: const Text(
-                      "Cancel",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    }),
-                Visibility(
-                  visible: !this.loading,
-                  child: MaterialButton(
-                      color: Colors.blue,
-                      child: const Text(
-                        "Sign in",
-                        style: TextStyle(color: Colors.white),
-                      ),
+                      height: 45,
+                      minWidth: Utils.displayWidth(context) * 0.45,
+                      color: Colors.black87,
                       onPressed: () {
-                       Navigator.pushReplacement(
-            context,
-            CupertinoPageRoute(
-                builder: (context) =>  HomePage()));
-                      }),
-                ),
-              ],
-            ));
-                        
-                    },
-                    child: const Text("Next",style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white))
-                   
-                  )
+                        Navigator.pushReplacement(
+                            context,
+                            CupertinoPageRoute(
+                                builder: (context) => HomePage()));
+                      },
+                      child: const Text("SKIP",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white))),
+                  const SizedBox(
+                    width: 1,
+                  ),
+                  MaterialButton(
+                      color: Colors.black87,
+                      height: 45,
+                      minWidth: Utils.displayWidth(context) * 0.45,
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            barrierDismissible: true,
+                            builder: (context) => AlertDialog(
+                                  title: const Text("Enter verification code"),
+                                  content: Container(
+                                    height: Utils.displayHeight(context) * 0.1,
+                                    child: Column(
+                                      children: [
+                                        TextField(
+                                          keyboardType: TextInputType.number,
+                                          maxLength: 6,
+                                          decoration: const InputDecoration(
+                                              hintText: "******"),
+                                          onChanged: (text) {
+                                            this.verificationCode = text;
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  actions: [
+                                    MaterialButton(
+                                        color: Colors.white,
+                                        child: const Text(
+                                          "Cancel",
+                                          style: TextStyle(color: Colors.black),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        }),
+                                    Visibility(
+                                      visible: !this.loading,
+                                      child: MaterialButton(
+                                          color: Colors.blue,
+                                          child: const Text(
+                                            "Sign in",
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                          onPressed: () {
+                                            Navigator.pushReplacement(
+                                                context,
+                                                CupertinoPageRoute(
+                                                    builder: (context) =>
+                                                        HomePage()));
+                                          }),
+                                    ),
+                                  ],
+                                ));
+                      },
+                      child: const Text("Next",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)))
                 ],
               ),
             ),
@@ -251,11 +240,9 @@ class _LoginScreen extends State<LoginScreen> {
                       ),
                       const SizedBox(width: 5),
                       InkWell(
-                        onTap: () {
-                         
-                        },
+                        onTap: () {},
                         child: Text(
-                          "Signup Here",
+                          "Contact Support",
                           style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w500,

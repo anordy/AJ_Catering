@@ -1,4 +1,5 @@
 import 'package:aj_catering/card/order_card.dart';
+import 'package:aj_catering/model/order_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import '../../utils/colors.dart';
@@ -64,11 +65,8 @@ class _OrderScreenState extends State<OrderScreen> {
                             ),
                             InkWell(
                               onTap: () {
-                                // showModalBottomSheet(
-                                //     backgroundColor: Colors.transparent,
-                                //     isScrollControlled: true,
-                                //     context: context,
-                                //     builder: (context) => filterOrderStatus());
+                              
+                                
                               },
                               child: Container(
                                   height: 30,
@@ -159,12 +157,12 @@ class _OrderScreenState extends State<OrderScreen> {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             scrollDirection: Axis.vertical,
-            itemCount: 20,
+            itemCount: orderModels.length,
             itemBuilder: (context, index) {
               return Padding(
                   padding: const EdgeInsets.only(
-                      left: 15.0, right: 15.0, bottom: 10.0, top: 10),
-                  child: InkWell(onTap: () {}, child: const OrderCard()));
+                      left: 15.0, right: 15.0, bottom: 5.0, top:5),
+                  child: InkWell(onTap: () {}, child:  OrderCard(order: orderModels[index],)));
             }));
   }
 
@@ -182,8 +180,8 @@ class _OrderScreenState extends State<OrderScreen> {
             itemBuilder: (context, index) {
               return Padding(
                   padding: const EdgeInsets.only(
-                      left: 15.0, right: 15.0, bottom: 10.0, top: 10),
-                  child: InkWell(onTap: () {}, child: const OrderCard()));
+                      left: 15.0, right: 15.0, bottom: 5.0, top: 5),
+                  child: InkWell(onTap: () {}, child:  OrderCard(order: orderModels[index],)));
             }));
   }
 }
