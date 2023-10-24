@@ -9,6 +9,7 @@ static Color shadow1 = Color(0xff002244);
   static Color orange = Color.fromRGBO(243, 146, 0, 1);
   static Color btnColor = Color.fromRGBO(243, 146, 0, 1);
   static Color deepOrange = Color(0xFFEF6C00);
+  static Color OrangeColor = Color(0xFFF58634);
   static Color preBase = Color(0xFFFE001A);
   
    static Color themeColor = Color(0xFFFE001A);

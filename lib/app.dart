@@ -1,4 +1,5 @@
 import 'package:aj_catering/pages/Auth/login_screen.dart';
+import 'package:aj_catering/pages/Auth/sample_login.dart';
 import 'package:aj_catering/pages/Auth/splash_screen.dart';
 import 'package:aj_catering/pages/Home_page.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: SampleLogin(),
     );
   }
 }
